@@ -68,7 +68,6 @@ public class MrecAdsHelper {
     // ❇️ Admob Ads.............
     private static void showAdmob(Activity activity, String adUnitId, FrameLayout adViewContainer){
 
-
         LogUtils.d("Call  Admob Banner "+adUnitId);
 
         AdView adView = new AdView(activity);
@@ -77,7 +76,6 @@ public class MrecAdsHelper {
         AdSize adSize = AdSize.MEDIUM_RECTANGLE;
         BannerAdRequest adRequest = new BannerAdRequest.Builder(adUnitId, adSize).build();
 
-
         adView.loadAd(
                 adRequest,
                 new AdLoadCallback<BannerAd>() {
@@ -85,12 +83,12 @@ public class MrecAdsHelper {
                     public void onAdLoaded(@NonNull BannerAd bannerAd) {
                         Log.d(TAG, "Banner ad loaded.");
                     }
-
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError adError) {
                         Log.d(TAG, "Banner ad failed to load: " + adError);
                     }
                 });
+
     }
 
 
@@ -98,7 +96,6 @@ public class MrecAdsHelper {
 
     // ❇️ Unity Ads.............
     private static void showUnity(Activity activity, String adUnitId, FrameLayout container){
-
         LogUtils.d("Call  Unity Banner "+adUnitId);
     }
 
@@ -107,8 +104,9 @@ public class MrecAdsHelper {
 
     // ❇️ Meta Ads.............
     private static void showMeta(Activity activity, String adUnitId, FrameLayout container){
-
         LogUtils.d("Call  Meta Banner "+adUnitId);
     }
+
+
 
 }

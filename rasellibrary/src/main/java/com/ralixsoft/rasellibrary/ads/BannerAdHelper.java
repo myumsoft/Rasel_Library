@@ -24,7 +24,6 @@ import java.util.Locale;
 
 public class BannerAdHelper {
 
-
     private BannerAdHelper() {
     }
 
@@ -41,7 +40,6 @@ public class BannerAdHelper {
             LogUtils.d(config.bannerId);
             return;
         }
-
 
         switch (config.bannerNetwork) {
             case "admob":
@@ -60,7 +58,6 @@ public class BannerAdHelper {
                 container.setVisibility(GONE);
                 break;
 
-
             default:
                 LogUtils.d("Banner: unknown network -> " + config.bannerNetwork);
                 container.setVisibility(GONE);
@@ -73,15 +70,13 @@ public class BannerAdHelper {
     // ❇️ Admob Ads.............
     private static void showAdmob(Activity activity, String adUnitId, FrameLayout adViewContainer){
 
-
         LogUtils.d("Call  Admob Banner "+adUnitId);
 
         AdView adView = new AdView(activity);
         adViewContainer.addView(adView);
 
-        AdSize adSize = AdSize.getLargeAnchoredAdaptiveBannerAdSize(activity, 360);
+        AdSize adSize = AdSize.BANNER;
         BannerAdRequest adRequest = new BannerAdRequest.Builder(adUnitId, adSize).build();
-
 
         adView.loadAd(
                 adRequest,
@@ -96,6 +91,7 @@ public class BannerAdHelper {
                         Log.d(TAG, "Banner ad failed to load: " + adError);
                     }
                 });
+
     }
 
 

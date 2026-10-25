@@ -1,0 +1,43 @@
+plugins {
+    alias(libs.plugins.android.library)
+}
+
+android {
+    namespace 'com.ralixsoft.rasellibrary'
+    compileSdk {
+        version = release(36) {
+            minorApiLevel = 1
+        }
+    }
+
+    defaultConfig {
+        minSdk 24
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    testImplementation libs.junit
+    androidTestImplementation libs.espresso.core
+    androidTestImplementation libs.ext.junit
+
+
+
+    implementation 'com.onesignal:OneSignal:[5.6.1, 5.99.99]'  // OneSignal Push Notification
+    implementation "androidx.browser:browser:1.9.0" // Custome Chromo Tab
+
+
+    implementation 'com.google.android.libraries.ads.mobile.sdk:ads-mobile-sdk:1.6.0' // Admob Ads SDK
+
+
+
+
+}
