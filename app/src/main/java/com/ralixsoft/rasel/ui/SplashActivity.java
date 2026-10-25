@@ -32,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
         adConfig.admobAppId = "ca-app-pub-6008675506822590~4991953285";
 
         adConfig.bannerNetwork = "admob";
-        adConfig.bannerId = "ca-app-pub-3940256099942544/6300978111";
+        adConfig.bannerId = "ca-app-pub-6008675506822590/6420764571";
 
         adConfig.interstitialNetwork = "admob";
         adConfig.interstitialId = "ca-app-pub-6008675506822590/6300978111";
